@@ -24,7 +24,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-function Section({children, title}) {
+function Section({children, title}: any) {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
@@ -66,9 +66,8 @@ function App() {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Header />
+        <Header testID="welcome" />
         <View
-          id="viewContainer"
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
